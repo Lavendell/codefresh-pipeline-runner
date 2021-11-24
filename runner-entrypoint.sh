@@ -27,5 +27,6 @@ if [ -n "$TRIGGER_NAME" ]
 then
 	codefresh run $PIPELINE_NAME --trigger=$TRIGGER_NAME --branch=$BRANCH ${@:1}
 else
+	echo codefresh run $PIPELINE_NAME --branch=$BRANCH ${@:1}
 	codefresh run $PIPELINE_NAME --branch=$BRANCH ${@:1}
 fi
